@@ -128,7 +128,7 @@ return squareReposError(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function()?  initial,TResult Function()?  squareReposLoading,TResult Function( List<SquareRepositoriesData?>? squareRepositoriesDataList)?  squareReposSuccess,TResult Function( ErrorHandler errorHandler)?  squareReposError,required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function()?  initial,TResult Function()?  squareReposLoading,TResult Function( List<SquareRepositoriesResponse?>? squareRepositoriesDataList)?  squareReposSuccess,TResult Function( ErrorHandler errorHandler)?  squareReposError,required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _Initial() when initial != null:
 return initial();case SquareRepositoriesLoading() when squareReposLoading != null:
@@ -152,7 +152,7 @@ return squareReposError(_that.errorHandler);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function()  initial,required TResult Function()  squareReposLoading,required TResult Function( List<SquareRepositoriesData?>? squareRepositoriesDataList)  squareReposSuccess,required TResult Function( ErrorHandler errorHandler)  squareReposError,}) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function()  initial,required TResult Function()  squareReposLoading,required TResult Function( List<SquareRepositoriesResponse?>? squareRepositoriesDataList)  squareReposSuccess,required TResult Function( ErrorHandler errorHandler)  squareReposError,}) {final _that = this;
 switch (_that) {
 case _Initial():
 return initial();case SquareRepositoriesLoading():
@@ -175,7 +175,7 @@ return squareReposError(_that.errorHandler);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function()?  initial,TResult? Function()?  squareReposLoading,TResult? Function( List<SquareRepositoriesData?>? squareRepositoriesDataList)?  squareReposSuccess,TResult? Function( ErrorHandler errorHandler)?  squareReposError,}) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function()?  initial,TResult? Function()?  squareReposLoading,TResult? Function( List<SquareRepositoriesResponse?>? squareRepositoriesDataList)?  squareReposSuccess,TResult? Function( ErrorHandler errorHandler)?  squareReposError,}) {final _that = this;
 switch (_that) {
 case _Initial() when initial != null:
 return initial();case SquareRepositoriesLoading() when squareReposLoading != null:
@@ -257,11 +257,11 @@ String toString() {
 
 
 class SquareRepositoriesSuccess implements SquareRepositoriesState {
-  const SquareRepositoriesSuccess(final  List<SquareRepositoriesData?>? squareRepositoriesDataList): _squareRepositoriesDataList = squareRepositoriesDataList;
+  const SquareRepositoriesSuccess(final  List<SquareRepositoriesResponse?>? squareRepositoriesDataList): _squareRepositoriesDataList = squareRepositoriesDataList;
   
 
- final  List<SquareRepositoriesData?>? _squareRepositoriesDataList;
- List<SquareRepositoriesData?>? get squareRepositoriesDataList {
+ final  List<SquareRepositoriesResponse?>? _squareRepositoriesDataList;
+ List<SquareRepositoriesResponse?>? get squareRepositoriesDataList {
   final value = _squareRepositoriesDataList;
   if (value == null) return null;
   if (_squareRepositoriesDataList is EqualUnmodifiableListView) return _squareRepositoriesDataList;
@@ -300,7 +300,7 @@ abstract mixin class $SquareRepositoriesSuccessCopyWith<$Res> implements $Square
   factory $SquareRepositoriesSuccessCopyWith(SquareRepositoriesSuccess value, $Res Function(SquareRepositoriesSuccess) _then) = _$SquareRepositoriesSuccessCopyWithImpl;
 @useResult
 $Res call({
- List<SquareRepositoriesData?>? squareRepositoriesDataList
+ List<SquareRepositoriesResponse?>? squareRepositoriesDataList
 });
 
 
@@ -320,7 +320,7 @@ class _$SquareRepositoriesSuccessCopyWithImpl<$Res>
 @pragma('vm:prefer-inline') $Res call({Object? squareRepositoriesDataList = freezed,}) {
   return _then(SquareRepositoriesSuccess(
 freezed == squareRepositoriesDataList ? _self._squareRepositoriesDataList : squareRepositoriesDataList // ignore: cast_nullable_to_non_nullable
-as List<SquareRepositoriesData?>?,
+as List<SquareRepositoriesResponse?>?,
   ));
 }
 

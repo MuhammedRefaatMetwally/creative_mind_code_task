@@ -1,5 +1,5 @@
 class ApiConstants {
-  static const String apiBaseUrl = "https://api.github.com/users/square/repos";
+  static const String apiBaseUrl = "https://api.github.com/";
 
 }
 

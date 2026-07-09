@@ -46,6 +46,10 @@ dependencies:
   enhanced_paginated_view: ^2.0.3
   flutter_bloc: ^9.1.1
   get_it: ^9.2.1
+  logger: ^2.7.0
+  equatable: ^2.1.0
+  infinite_scroll_pagination: ^5.1.1
+  url_launcher: ^6.3.2
 
 dev_dependencies:
   flutter_test:

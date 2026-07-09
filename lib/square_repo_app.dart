@@ -14,7 +14,7 @@ class SquareRepoApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(useMaterial3:true ,colorScheme: .fromSeed(seedColor: Colors.deepPurple),),
       home: BlocProvider(
-        create: (BuildContext context) => getIt<SquareRepositoriesCubit>(),
+        create: (BuildContext context) => getIt<SquareRepositoriesCubit>()..getSpecializations(1),
         child: SquareRepositoriesScreen(),
       ),
     );
