@@ -3,7 +3,6 @@ import 'package:creative_mind_code_task/features/square_repositories/logic/Squar
 import 'package:creative_mind_code_task/features/square_repositories/view/widgets/SquareRepositoriesItem.dart';
 import 'package:enhanced_paginated_view/enhanced_paginated_view.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class SquareRepositoriesList extends StatefulWidget {
@@ -81,6 +80,7 @@ class _SquareRepositoriesListState extends State<SquareRepositoriesList> {
                           if (!await launchUrl(_url)) {
                           throw Exception('Could not launch $_url');
                           }
+                          Navigator.pop(context);
                         },
                         child: Center(child: Text("Go To Repository!")),
                       ),
